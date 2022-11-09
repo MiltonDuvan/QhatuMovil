@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "968330300674",
+    "project_id": "subastaqhatu",
+    "storage_bucket": "subastaqhatu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:968330300674:android:2e5f5ab22828218326461b",
+        "android_client_info": {
+          "package_name": "com.qhatusubasta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "968330300674-ncg6vjromd6p3g7eea7d5lb0o8u6es53.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiWFLflmAgGzKMUQJWsTyNWamc2S7-CN0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "968330300674-ncg6vjromd6p3g7eea7d5lb0o8u6es53.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
