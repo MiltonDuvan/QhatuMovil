@@ -16,11 +16,12 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 //implementamos click
 public class Login extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView txtRegisterLogin;
+    private TextView txtRegisterLogin,txtOlvidopassLogin;
 
     private EditText edtEmailLogin,edtPasswordLogin;
     private Button btnIniciarSesion;
@@ -41,6 +42,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         edtEmailLogin=(EditText) findViewById(R.id.edtEmailLogin);
         edtPasswordLogin=(EditText) findViewById(R.id.edtPasswordLogin);
 
+        txtOlvidopassLogin=(TextView)findViewById(R.id.txtOlvidopassLogin);
+        txtOlvidopassLogin.setOnClickListener(this);
+
         mAuth=FirebaseAuth.getInstance();
     }
 
@@ -55,6 +59,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
             case R.id.btnIniciarSesion:
                 btnIniciarSesion();
+                break;
+            case R.id.txtOlvidopassLogin:
+                startActivity(new Intent(this,ForgotPassword.class));
                 break;
         }
 
@@ -87,8 +94,16 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
            @Override
            public void onComplete(@NonNull Task<AuthResult> task) {
                if (task.isSuccessful()){
-                   //redirige al perfil del usuario
-                   startActivity(new Intent(Login.this,PerfilUser.class));
+                   //valuidamos que el correo este verificado
+                   FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
+                   if (user.isEmailVerified()){
+                       //redirige al perfil del usuario
+                       startActivity(new Intent(Login.this,PerfilUser.class));
+                   }else{
+                       user.sendEmailVerification();
+                       Toast.makeText(Login.this, "Revisa tu bandeja de correos para verificar tu cuenta", Toast.LENGTH_LONG).show();
+                   }
+
                }else{
                    Toast.makeText(Login.this, "Fallo al iniciar sesion, verifica tus credenciales", Toast.LENGTH_LONG).show();
                }
