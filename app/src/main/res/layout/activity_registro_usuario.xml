@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/edtborder"
     tools:context=".RegistroUsuario">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/qhatu" />
+
     <TextView
         android:id="@+id/titlesubasta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Qhatu Subasta"
-        android:textSize="50sp"
-        android:textStyle="bold"
         android:fontFamily="sans-serif-black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.464"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.081" />
+        android:text="Qhatu Subasta"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView2"
@@ -27,90 +30,77 @@
         android:fontFamily="sans-serif-black"
         android:text="Bienvenido aqui puedes registrarte"
         android:textSize="17sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.206" />
+        android:layout_gravity="center"
+        android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/nombreRegistro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="370dp"
-        android:hint="Nombres"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.297"/><![CDATA[
+    <LinearLayout
+        android:background="@color/efeseis"
+        android:layout_width="325dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
 
+        <EditText
 
+          android:background="@drawable/edtborder"
+            android:id="@+id/nombreRegistro"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="30dp"
+            android:hint="Nombres"
+            android:textSize="22sp"
+            android:layout_marginTop="30dp"
 
+           />
 
-    />
+        <EditText
+            android:id="@+id/apellidoRegistro"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:hint="Apellidos"
+            android:background="@drawable/edtborder"
+            android:textSize="22sp"
+         />
 
+        <EditText
+            android:id="@+id/emailRegistro"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:hint="Email"
+            android:textSize="22dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edtborder"
+            android:layout_gravity="center"
+          />
 
+        <EditText
+            android:id="@+id/passwordRegistro"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textSize="22sp"
+            android:background="@drawable/edtborder"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+           />
 
-
-
-    ]]>
-
-    <EditText
-        android:id="@+id/apellidoRegistro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="370dp"
-        android:hint="Apellidos"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.404" />
-
-    <EditText
-        android:id="@+id/emailRegistro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="370dp"
-        android:hint="Email"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.516" />
-
-    <EditText
-        android:id="@+id/passwordRegistro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:width="370dp"
-        android:hint="Password"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.622" />
-
-    <Button
-        android:id="@+id/btnRegistrarse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Registrarse"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.613"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.92" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btnRegistrarse"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:text="Registrarse"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.912" />
+    </LinearLayout>
+</LinearLayout>

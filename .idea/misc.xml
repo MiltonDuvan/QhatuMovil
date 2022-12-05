@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/QhatuMovil/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/QhatuMovil/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/QhatuMovil/app/src/main/res/layout/activity_perfil_user.xml" value="0.2" />
         <entry key="..\:/QhatuSubasta/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.121" />
         <entry key="..\:/QhatuSubasta/app/src/main/res/drawable/QhatuMovil1_background.xml" value="0.121" />
         <entry key="..\:/QhatuSubasta/app/src/main/res/drawable/QhatuMovil_background.xml" value="0.121" />

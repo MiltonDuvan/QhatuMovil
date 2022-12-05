@@ -7,10 +7,9 @@
     tools:context=".PerfilUser">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/mail"
         android:layout_width="65dp"
-        android:layout_height="12dp"
-        android:text="Bienvenido"
+        android:layout_height="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.471"
