@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Index">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@color/color_borde">
+        <ImageButton
+            android:id="@+id/buscar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/lupa"
+            android:background="@drawable/icono"
+            android:layout_marginRight="0dp"
+            android:layout_marginLeft="20dp"/>
+
+        <EditText
+            android:id="@+id/edtbuscar"
+            android:layout_width="230dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/edt"/>
+
+        <ImageButton
+            android:id="@+id/favoritos"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/campana"
+            android:background="@drawable/icono"
+            android:layout_marginRight="20dp" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="365dp"
+        android:layout_height="678dp"
+        android:layout_gravity="center"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <GridView
+            android:id="@+id/gridIndex"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="5dp"
+            android:numColumns="2"
+            android:verticalSpacing="10dp">
+
+        </GridView>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/Bottom"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_borde"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageButton
+            android:id="@+id/imgbHome"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/home"
+            android:background="@drawable/icono"
+            android:layout_marginRight="80dp" />
+
+        <ImageButton
+            android:id="@+id/imgbFavoritos"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/love"
+            android:background="@drawable/icono"
+            android:layout_marginRight="80dp"/>
+
+        <ImageButton
+            android:id="@+id/imgbPerfil"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/usuario"
+            android:background="@drawable/icono" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

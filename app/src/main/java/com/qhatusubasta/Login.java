@@ -133,8 +133,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
            edtPasswordLogin.requestFocus();
            return;
        }
-       if (password.length()<8){
-           edtPasswordLogin.setError("la contraseña debe ser minimo a 8 caracteres");
+       if (password.length()<6){
+           edtPasswordLogin.setError("la contraseña debe ser minimo a 6 caracteres");
        }
 
        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -145,7 +145,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                    FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
                    if (user.isEmailVerified()){
                        //redirige al perfil del usuario
-                       startActivity(new Intent(Login.this,MainActivity.class));
+                       startActivity(new Intent(Login.this,Index.class));
                    }else{
                        user.sendEmailVerification();
                        Toast.makeText(Login.this, "Revisa tu bandeja de correos para verificar tu cuenta", Toast.LENGTH_LONG).show();

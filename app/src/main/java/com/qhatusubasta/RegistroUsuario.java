@@ -69,6 +69,11 @@ public class RegistroUsuario extends AppCompatActivity implements View.OnClickLi
         String nombre = nombreRegistro.getText().toString().trim();
         String apellido= apellidoRegistro.getText().toString().trim();
 
+        emailRegistro.setText("");
+        passwordRegistro.setText("");
+        nombreRegistro.setText("");
+        apellidoRegistro.setText("");
+
         if (nombre.isEmpty()){
             nombreRegistro.setError("Este campo es requerido");
             nombreRegistro.requestFocus();
@@ -99,8 +104,8 @@ public class RegistroUsuario extends AppCompatActivity implements View.OnClickLi
             return;
         }
 
-        if (password.length()<8) {
-        passwordRegistro.setError("Escribe una contraseña minimo de 8 caracteres");
+        if (password.length()<6) {
+        passwordRegistro.setError("Escribe una contraseña minimo de 6 caracteres");
         passwordRegistro.requestFocus();
         return;
         }
@@ -120,6 +125,7 @@ public class RegistroUsuario extends AppCompatActivity implements View.OnClickLi
                                     if (task.isSuccessful()){
                                         //si el usuario se registro y sus datos se han insertado en firebase nos notifica este mensaje
                                         Toast.makeText(RegistroUsuario.this, "Su registro fue exitoso!!", Toast.LENGTH_LONG).show();
+                                        startActivity(new Intent(RegistroUsuario.this,Index.class));
                                     }else{
                                         Toast.makeText(RegistroUsuario.this, "Fallo al registrar, intentalo de nuevo", Toast.LENGTH_LONG).show();
                                     }

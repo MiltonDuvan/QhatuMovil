@@ -11,5 +11,9 @@
     <color name="bordercontainer">#FFC300</color>
     <color name="backgroundcontainer">#DCDCDC</color>
     <color name="efeseis">#f6f6f6</color>
+    <color name="color_borde">#FFCC28</color>
+    <color name="color_fondo">#F8F8F8</color>
+    <color name="color_texto">#242B9F</color>
+    <color name="transparente">#00242B9F</color>
 
 </resources>

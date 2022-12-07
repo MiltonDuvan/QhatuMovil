@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EditarPerfilUser">
+    <LinearLayout
+        android:layout_width="412dp"
+        android:layout_height="200dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/qhatumovilim" />
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="355dp"
+        android:layout_height="410dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
+        android:elevation="50dp"
+        app:cardElevation="50dp"
+        app:cardCornerRadius="20dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/txttitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Editar Perfil"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtnombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Nombre"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/edtnombre"
+                    android:layout_width="187dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="60dp"
+                    android:background="@color/white"
+
+                    android:elevation="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtapellido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Apellido"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/edtapellido"
+                    android:layout_width="190dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="50dp"
+                    android:background="@color/white"
+
+
+                    android:elevation="5dp" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnguardarcambios"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/azultext"
+                android:text="Guardar_cambios" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
