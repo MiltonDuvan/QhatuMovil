@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_marginTop="20dp">
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/txttitulo"
@@ -39,15 +39,16 @@
                 android:layout_gravity="center_horizontal"
                 android:text="Editar Perfil"
                 android:textSize="20dp"
-                android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:textStyle="bold"
                 android:textColor="@color/color_texto"/>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="350dp"
                 android:layout_height="57dp"
                 android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <TextView
@@ -55,7 +56,6 @@
                     android:layout_width="100dp"
                     android:layout_height="37dp"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="5dp"
                     android:text="Nombre"
                     android:textSize="18dp"
                     android:textColor="@color/color_texto"/>
@@ -64,26 +64,26 @@
                     android:id="@+id/edtnombre"
                     android:layout_width="187dp"
                     android:layout_height="37dp"
-                    android:layout_gravity="center_horizontal"
                     android:background="@drawable/edt"
                     android:elevation="2dp"
                     android:gravity="center"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:textColor="@color/black"/>
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="350dp"
                 android:layout_height="57dp"
                 android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="37dp"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="5dp"
                     android:text="Apellido"
                     android:textSize="18dp"
                     android:textColor="@color/color_texto" />
@@ -92,11 +92,10 @@
                     android:id="@+id/edtapellido"
                     android:layout_width="187dp"
                     android:layout_height="37dp"
-                    android:layout_gravity="center_horizontal"
                     android:background="@drawable/edt"
                     android:elevation="2dp"
                     android:gravity="center"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:textColor="@color/black" />
 
             </LinearLayout>
@@ -106,7 +105,8 @@
                 android:id="@+id/btnguardarcambios"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
-                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="20dp"
                 android:backgroundTint="@color/color_texto"
                 android:text="Guardar" />
 

@@ -5,15 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".Login">
 
-    <ImageView
-        android:layout_marginTop="5dp"
-        android:layout_width="130dp"
-        android:layout_height="133dp"
-        android:layout_gravity="center"
-        android:src="@drawable/qhatumovilim"
-        app:layout_constraintEnd_toStartOf="parent" />
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/qhatumovilim" />
+    </LinearLayout>
 
 
     <TextView
@@ -23,14 +27,9 @@
         android:layout_gravity="center"
         android:fontFamily="sans-serif-black"
         android:text="¡Bienvenido a Qhatu!"
-        android:textColor="@color/azultext"
+        android:textColor="@color/color_texto"
         android:textSize="17sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.218" />
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/textView3"
@@ -40,61 +39,44 @@
         android:layout_marginTop="10dp"
         android:text="Inicio de sesión"
         android:layout_gravity="center"
-        android:textColor="@android:color/black"
-        android:textSize="17sp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.278" />
+        android:textColor="@color/color_texto"
+        android:textSize="17sp"/>
 
 <LinearLayout
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_height="150dp"
     android:orientation="vertical"
-    android:layout_gravity="center"
+    android:gravity="center"
+    android:elevation="2dp"
     android:layout_marginTop="20dp"
-    android:backgroundTint="@color/efeseis"
-    android:background="@drawable/bordescontainer"
-    >
+    android:background="@drawable/fondoinicio">
 
     <EditText
         android:id="@+id/edtEmailLogin"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:width="300dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="37dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_gravity="center"
+        android:elevation="2dp"
+        android:background="@drawable/edt"
         android:hint="Ingrese su email"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.339" />
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        />
 
     <EditText
         android:id="@+id/edtPasswordLogin"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_gravity="center"
+        android:layout_height="37dp"
         android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/edt"
+        android:elevation="2dp"
         android:hint="Ingrese su password"
-        android:textSize="12sp"
+        android:textSize="18sp"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.445" />
+        />
 
 </LinearLayout>
 
@@ -116,7 +98,6 @@
         android:id="@+id/txtOlvidopassLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_marginTop="30dp"
         android:text="Olvido su contraseña" />
 
@@ -129,12 +110,12 @@
         android:text="Registrarme" />
         </LinearLayout>
     <Button
-        android:layout_marginTop="40dp"
         android:id="@+id/btnIniciarSesion"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
         android:text="Iniciar sesíon"
-        android:layout_gravity="center"
+        android:backgroundTint="@color/color_texto"
       />
 
 
