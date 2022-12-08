@@ -24,9 +24,8 @@
         android:layout_height="450dp"
         android:layout_gravity="center"
         android:layout_marginTop="27dp"
-        android:elevation="50dp"
         app:cardCornerRadius="12dp"
-        app:cardElevation="50dp">
+        app:cardElevation="5dp">
 
 
         <LinearLayout
