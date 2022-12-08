@@ -22,8 +22,8 @@
             android:layout_width="330dp"
             android:layout_height="50dp"
             android:text="Puplicar Producto"
-            android:textColor="@color/black"
-            android:textSize="25dp"
+            android:textColor="@color/color_texto"
+            android:textSize="20dp"
             android:gravity="center"
             android:layout_gravity="center_horizontal"/>
 
@@ -211,7 +211,7 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_marginTop="300dp"
-            android:background="@drawable/botones"
+            android:backgroundTint="@color/color_texto"
             android:text="Publicar" />
 
 
