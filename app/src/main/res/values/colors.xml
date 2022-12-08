@@ -15,5 +15,6 @@
     <color name="color_fondo">#F8F8F8</color>
     <color name="color_texto">#242B9F</color>
     <color name="transparente">#00242B9F</color>
+    <color name="azulbtn">#03A9F4</color>
 
 </resources>

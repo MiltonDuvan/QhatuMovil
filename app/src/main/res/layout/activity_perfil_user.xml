@@ -5,15 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".PerfilUser">
-<LinearLayout
-    android:layout_width="412dp"
-    android:layout_height="200dp">
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/qhatumovilim" />
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/qhatumovilim" />
+    </LinearLayout>
 
 
     <androidx.cardview.widget.CardView
@@ -22,7 +25,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="27dp"
         android:elevation="50dp"
-        app:cardCornerRadius="20dp"
+        app:cardCornerRadius="12dp"
         app:cardElevation="50dp">
 
 
@@ -30,7 +33,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="10dp"
+           android:gravity="center_horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -38,6 +42,7 @@
                 android:layout_gravity="center"
                 android:text="Datos de Perfil"
                 android:textSize="20dp"
+                android:textColor="@color/color_texto"
                 android:layout_marginBottom="10dp"
                 android:textStyle="bold" />
 
@@ -50,20 +55,24 @@
 
                 <TextView
                     android:id="@+id/txtnombretitulo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_width="100dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_marginTop="5dp"
-                    android:text="NOMBRE"
-                    android:textSize="15dp" />
+                    android:layout_marginRight="5dp"
+                    android:text="Nombre"
+                    android:textSize="18dp"
+                    android:textColor="@color/color_texto" />
 
                 <TextView
                     android:id="@+id/txtnombre"
-                    android:layout_width="177dp"
+                    android:layout_width="210dp"
                     android:layout_height="37dp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="60dp"
-                    android:elevation="5dp"
+                    android:elevation="2dp"
+                    android:gravity="center"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
                     android:background="@drawable/edt"/>
 
             </LinearLayout>
@@ -76,21 +85,25 @@
 
                 <TextView
                     android:id="@+id/txtapellido_titulo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_width="100dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="15dp"
                     android:layout_marginTop="5dp"
-                    android:text="APELLIDO"
-                    android:textSize="15dp" />
+                    android:layout_marginRight="5dp"
+                    android:text="Apellido"
+                    android:textSize="18dp"
+                    android:textColor="@color/color_texto" />
 
                 <TextView
                     android:id="@+id/txtpellido"
-                    android:layout_width="183dp"
+                    android:layout_width="210dp"
                     android:layout_height="37dp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="50dp"
                     android:background="@drawable/edt"
-                    android:elevation="5dp" />
+                    android:elevation="5dp"
+                    android:gravity="center"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"/>
 
             </LinearLayout>
             <LinearLayout
@@ -101,34 +114,39 @@
 
                 <TextView
                     android:id="@+id/txtcorreo_titulo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_width="100dp"
+                    android:layout_height="37dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
                     android:layout_marginTop="5dp"
-                    android:text="CORREO"
-                    android:textSize="15dp" />
+                    android:text="Correo"
+                    android:textSize="18dp"
+                    android:textColor="@color/color_texto" />
 
                 <TextView
                     android:id="@+id/txtcorreo"
-                    android:layout_width="183dp"
+                    android:layout_width="210dp"
                     android:layout_height="37dp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="50dp"
                     android:background="@drawable/edt"
-                    android:elevation="5dp" />
+                    android:elevation="2dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="58dp"
-
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
                 android:gravity="center_horizontal">
 
                 <Button
                     android:id="@+id/btneditar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
                     android:backgroundTint="#F816308A"
                     android:text="EDITAR DATOS" />
@@ -136,10 +154,11 @@
 
                 <Button
                     android:id="@+id/btnLogout"
-                    android:layout_width="wrap_content"
-                    android:layout_height="45dp"
+                    android:layout_width="160dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_margin="20dp"
+                    android:backgroundTint="@color/azulbtn"
                     android:text="Cerrar sesión" />
             </LinearLayout>
 
@@ -153,7 +172,7 @@
         android:background="@color/color_borde"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginTop="66dp">
+        android:layout_marginTop="56dp">
         <ImageButton
             android:id="@+id/imgbHome"
             android:layout_width="30dp"

@@ -1,4 +1,4 @@
-package com.qhatusubasta;
+package Model;
 
 public class Usuario {
     public String nombre,apellido,email;

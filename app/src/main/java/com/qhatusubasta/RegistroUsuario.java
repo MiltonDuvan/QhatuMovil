@@ -18,6 +18,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
+import Model.Usuario;
+
 public class RegistroUsuario extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;

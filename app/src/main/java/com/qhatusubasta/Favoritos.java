@@ -43,7 +43,7 @@ public class Favoritos extends AppCompatActivity implements View.OnClickListener
                 break;
 
             case R.id.imgbPerfil:
-                Intent perfil = new Intent(Favoritos.this,RegistroProducto.class);
+                Intent perfil = new Intent(Favoritos.this,PerfilUser.class);
                 startActivity(perfil);
                 break;
         }

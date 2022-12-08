@@ -79,7 +79,7 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
                 startActivity(home);
                 break;
             case R.id.imgbFavoritos:
-                Intent favoritos = new Intent(Index.this,RegistroProducto.class);
+                Intent favoritos = new Intent(Index.this,Favoritos.class);
                 startActivity(favoritos);
                 break;
 
