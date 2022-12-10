@@ -69,6 +69,7 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
 
             }
         });
+
     }
 
     @Override
@@ -87,6 +88,10 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
                 Intent perfil = new Intent(Index.this,PerfilUser.class);
                 startActivity(perfil);
                 break;
+                case R.id.gridIndex:
+                    Intent detalle = new Intent(Index.this,Subasta.class);
+                    startActivity(detalle);
+                    break;
 
         }
     }

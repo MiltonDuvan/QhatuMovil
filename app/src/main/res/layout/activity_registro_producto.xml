@@ -24,6 +24,7 @@
             android:text="Puplicar Producto"
             android:textColor="@color/color_texto"
             android:textSize="20dp"
+            android:textStyle="bold"
             android:gravity="center"
             android:layout_gravity="center_horizontal"/>
 
@@ -89,14 +90,14 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:orientation="horizontal"
             android:layout_marginTop="330dp"
             android:gravity="center">
             <TextView
                 android:id="@+id/txtNombreProducto"
                 android:layout_width="130dp"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:gravity="center_vertical"
                 android:text="Nombre"
@@ -106,7 +107,7 @@
             <EditText
                 android:id="@+id/edtNombreProducto"
                 android:layout_width="200dp"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:hint="Nombre del producto"
@@ -116,14 +117,14 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:orientation="horizontal"
-            android:layout_marginTop="400dp"
+            android:layout_marginTop="390dp"
             android:gravity="center">
             <TextView
                 android:id="@+id/txtFechainicioProducto"
                 android:layout_width="130dp"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:gravity="center_vertical"
                 android:text="Fecha De Inicio"
@@ -132,7 +133,7 @@
             <EditText
                 android:id="@+id/edtFechainicioProducto"
                 android:layout_width="200dp"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:hint="Fecha De Inicio"
@@ -148,14 +149,14 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:orientation="horizontal"
-            android:layout_marginTop="470dp"
+            android:layout_marginTop="450dp"
             android:gravity="center">
             <TextView
                 android:id="@+id/txtFechacierreProducto"
                 android:layout_width="130dp"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:gravity="center_vertical"
                 android:text="Fecha De Cierre"
@@ -165,7 +166,7 @@
             <EditText
                 android:id="@+id/edtFechacierreProducto"
                 android:layout_width="200dp"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:background="@drawable/edt"
                 android:gravity="center"
@@ -180,24 +181,56 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:orientation="horizontal"
-            android:layout_marginTop="540dp"
+            android:layout_marginTop="510dp"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/txtHoracierreProducto"
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:text="Hora De Cierre"
+                android:textColor="@color/color_texto"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/edtHoracierreProducto"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/edt"
+                android:gravity="center"
+                android:hint="Fecha De Cierre"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:ems="10"
+                android:focusableInTouchMode="false"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="570dp"
             android:gravity="center">
             <TextView
                 android:id="@+id/txtOferteProducto"
                 android:layout_width="130dp"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:gravity="center_vertical"
-                android:text="Oferta Inicial"
+                android:text="Valor Inicial"
                 android:textColor="@color/color_texto"
                 android:textSize="18dp" />
 
             <EditText
                 android:id="@+id/edtOferteProducto"
                 android:layout_width="200dp"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:hint="Oferta Inicial"
@@ -208,9 +241,9 @@
         <Button
             android:id="@+id/btnPublicarProducto"
             android:layout_width="120dp"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="310dp"
             android:backgroundTint="@color/color_texto"
             android:text="Publicar" />
 

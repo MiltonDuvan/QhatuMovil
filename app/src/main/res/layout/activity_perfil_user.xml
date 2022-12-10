@@ -55,7 +55,7 @@
                 <TextView
                     android:id="@+id/txtnombretitulo"
                     android:layout_width="100dp"
-                    android:layout_height="37dp"
+                    android:layout_height="40dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="5dp"
                     android:text="Nombre"
@@ -65,10 +65,10 @@
                 <TextView
                     android:id="@+id/txtnombre"
                     android:layout_width="210dp"
-                    android:layout_height="37dp"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_height="40dp"
                     android:elevation="2dp"
-                    android:gravity="center"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
                     android:textSize="16dp"
                     android:textColor="@color/black"
                     android:background="@drawable/edt"/>
@@ -84,7 +84,7 @@
                 <TextView
                     android:id="@+id/txtapellido_titulo"
                     android:layout_width="100dp"
-                    android:layout_height="37dp"
+                    android:layout_height="40dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="5dp"
                     android:text="Apellido"
@@ -94,11 +94,11 @@
                 <TextView
                     android:id="@+id/txtpellido"
                     android:layout_width="210dp"
-                    android:layout_height="37dp"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_height="40dp"
                     android:background="@drawable/edt"
                     android:elevation="5dp"
-                    android:gravity="center"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
                     android:textSize="16dp"
                     android:textColor="@color/black"/>
 
@@ -112,7 +112,7 @@
                 <TextView
                     android:id="@+id/txtcorreo_titulo"
                     android:layout_width="100dp"
-                    android:layout_height="37dp"
+                    android:layout_height="40dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="5dp"
                     android:text="Correo"
@@ -122,11 +122,11 @@
                 <TextView
                     android:id="@+id/txtcorreo"
                     android:layout_width="210dp"
-                    android:layout_height="37dp"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_height="40dp"
                     android:background="@drawable/edt"
                     android:elevation="2dp"
-                    android:gravity="center"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
                     android:textColor="@color/black"
                     android:textSize="16dp" />
 

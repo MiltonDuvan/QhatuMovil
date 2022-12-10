@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -32,10 +34,10 @@ import Model.Producto;
 public class RegistroProducto extends AppCompatActivity implements View.OnClickListener {
     Button btnpublicar;
     ImageButton img_producto;
-    EditText edtDescripcionProducto, edtNombreProducto,edtFechainicioProducto,edtFechacierreProducto,edtOferteProducto;
+    EditText edtDescripcionProducto, edtNombreProducto,edtFechainicioProducto,edtFechacierreProducto,edtHoracierreProducto, edtOferteProducto;
     FirebaseDatabase database;
     DatabaseReference myRef;
-    int año, mes, dia;
+    int año, mes, dia, hora, minutos;
     Uri uri;
     StorageReference storageReference;
     String t;
@@ -64,6 +66,7 @@ public class RegistroProducto extends AppCompatActivity implements View.OnClickL
         producto.setNombre(edtNombreProducto.getText().toString());
         producto.setFecha_inicio(edtFechainicioProducto.getText().toString());
         producto.setFecha_cierre(edtFechacierreProducto.getText().toString());
+        producto.setHora_cierre(edtHoracierreProducto.getText().toString());
         producto.setOferta_inicial(edtOferteProducto.getText().toString());
         myRef.child("producto").child(producto.getId()).setValue(producto);
 
@@ -80,9 +83,12 @@ public class RegistroProducto extends AppCompatActivity implements View.OnClickL
         edtFechainicioProducto.setOnClickListener(this);
         edtFechacierreProducto = findViewById(R.id.edtFechacierreProducto);
         edtFechacierreProducto.setOnClickListener(this);
+        edtHoracierreProducto = findViewById(R.id.edtHoracierreProducto);
+        edtHoracierreProducto.setOnClickListener(this);
         edtOferteProducto = findViewById(R.id.edtOferteProducto);
         btnpublicar = findViewById(R.id.btnPublicarProducto);
         btnpublicar.setOnClickListener(this);
+
 // Barras de navegacion
         imgbHome = findViewById(R.id.imgbHome);
         imgbHome.setOnClickListener(this);
@@ -102,7 +108,6 @@ public class RegistroProducto extends AppCompatActivity implements View.OnClickL
                 String imageUri=null;
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-//                    Toast.makeText(RegistroProducto.this, "Foto subida exitosamente...", Toast.LENGTH_SHORT).show();
                     img_producto.setImageURI(uri);
 
                     Task<Uri> downloadUrl = taskSnapshot.getStorage().getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
@@ -127,6 +132,7 @@ public class RegistroProducto extends AppCompatActivity implements View.OnClickL
                 edtNombreProducto.setText("");
                 edtFechainicioProducto.setText("");
                 edtFechacierreProducto.setText("");
+                edtHoracierreProducto.setText("");
                 edtOferteProducto.setText("");
                 break;
             case R.id.img_subirencont:
@@ -169,6 +175,21 @@ public class RegistroProducto extends AppCompatActivity implements View.OnClickL
                     }
                             ,dia, mes, año);
                     datePickerDialog.show();
+                }
+                break;
+            case R.id.edtHoracierreProducto:
+                if(v == edtHoracierreProducto){
+                    final Calendar calendarc = Calendar.getInstance();
+                    hora = calendarc.get(Calendar.HOUR_OF_DAY);
+                    minutos = calendarc.get(Calendar.MINUTE);
+                    TimePickerDialog timePickerDialog = new TimePickerDialog(RegistroProducto.this, new TimePickerDialog.OnTimeSetListener() {
+                        @Override
+                        public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                            edtHoracierreProducto.setText(hourOfDay + ":" + minute);
+                        }
+                    }
+                    ,hora, minutos,false);
+                    timePickerDialog.show();
                 }
                 break;
 

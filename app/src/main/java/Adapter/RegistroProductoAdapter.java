@@ -1,6 +1,7 @@
 package Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -8,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.qhatusubasta.R;
+import com.qhatusubasta.Subasta;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -53,5 +55,6 @@ public class RegistroProductoAdapter extends BaseAdapter {
         imageUri= gridIndex.get(position).getFoto();
         Picasso.get().load(imageUri).into(imageView);
         return root;
+
     }
 }
