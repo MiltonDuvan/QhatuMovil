@@ -28,7 +28,7 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
     GridView gribTndex;
 
     // Barras de navegacion
-    ImageButton imgbHome, imgbFavoritos, imgbPerfil;
+    ImageButton imgbHome, imgbFavoritos, imgbPerfil, imgbNotificaciones;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +47,8 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
         imgbFavoritos.setOnClickListener(this);
         imgbPerfil = findViewById(R.id.imgbPerfil);
         imgbPerfil.setOnClickListener(this);
+        imgbNotificaciones = findViewById(R.id.imgbNotificaciones);
+        imgbNotificaciones.setOnClickListener(this);
     }
 
     public void Lista(){
@@ -88,9 +90,9 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
                 Intent perfil = new Intent(Index.this,PerfilUser.class);
                 startActivity(perfil);
                 break;
-                case R.id.gridIndex:
-                    Intent detalle = new Intent(Index.this,Subasta.class);
-                    startActivity(detalle);
+            case R.id.imgbNotificaciones:
+                    Intent notificaciones = new Intent(Index.this,Notificaciones.class);
+                    startActivity(notificaciones);
                     break;
 
         }

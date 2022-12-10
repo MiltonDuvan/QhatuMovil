@@ -7,14 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class Favoritos extends AppCompatActivity implements View.OnClickListener {
-
+public class Notificaciones extends AppCompatActivity implements View.OnClickListener {
     // Barras de navegacion
     ImageButton imgbHome, imgbFavoritos, imgbPerfil, imgbNotificaciones;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_favoritos);
+        setContentView(R.layout.activity_notificaciones);
         referenciar();
     }
 
@@ -33,25 +32,24 @@ public class Favoritos extends AppCompatActivity implements View.OnClickListener
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-
-            // Barras de navegacion
             case R.id.imgbHome:
-                Intent home = new Intent(Favoritos.this,Index.class);
+                Intent home = new Intent(Notificaciones.this,Index.class);
                 startActivity(home);
                 break;
             case R.id.imgbFavoritos:
-                Intent favoritos = new Intent(Favoritos.this,Favoritos.class);
+                Intent favoritos = new Intent(Notificaciones.this,Favoritos.class);
                 startActivity(favoritos);
                 break;
 
             case R.id.imgbPerfil:
-                Intent perfil = new Intent(Favoritos.this,PerfilUser.class);
+                Intent perfil = new Intent(Notificaciones.this,PerfilUser.class);
                 startActivity(perfil);
                 break;
             case R.id.imgbNotificaciones:
-                Intent notificaciones = new Intent(Favoritos.this,Notificaciones.class);
+                Intent notificaciones = new Intent(Notificaciones.this,Notificaciones.class);
                 startActivity(notificaciones);
                 break;
+
         }
     }
 }

@@ -31,7 +31,7 @@
             android:background="@drawable/edt"/>
 
         <ImageButton
-            android:id="@+id/favoritos"
+            android:id="@+id/imgbNotificaciones"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:scaleType="centerCrop"
