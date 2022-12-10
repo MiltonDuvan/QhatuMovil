@@ -54,7 +54,7 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
     public void Lista(){
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference();
-        myRef.child("producto").addValueEventListener(new ValueEventListener() {
+        myRef.child("Producto").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot objSaaptdhot : snapshot.getChildren()){

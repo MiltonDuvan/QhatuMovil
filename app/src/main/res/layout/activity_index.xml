@@ -48,7 +48,8 @@
         app:cardElevation="5dp"
         app:cardCornerRadius="12dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/color_fondo">
 
         <GridView
             android:id="@+id/gridIndex"

@@ -68,7 +68,7 @@ public class RegistroProducto extends AppCompatActivity implements View.OnClickL
         producto.setFecha_cierre(edtFechacierreProducto.getText().toString());
         producto.setHora_cierre(edtHoracierreProducto.getText().toString());
         producto.setOferta_inicial(edtOferteProducto.getText().toString());
-        myRef.child("producto").child(producto.getId()).setValue(producto);
+        myRef.child("Producto").child(producto.getId()).setValue(producto);
 
         Toast.makeText(this, "Datos insertados", Toast.LENGTH_SHORT).show();
 
@@ -103,7 +103,7 @@ public class RegistroProducto extends AppCompatActivity implements View.OnClickL
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == Gallery_Code && resultCode == RESULT_OK){
             uri = data.getData();
-            StorageReference filePath = storageReference.child("fotos").child(uri.getLastPathSegment());
+            StorageReference filePath = storageReference.child("Fotos").child(uri.getLastPathSegment());
             filePath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 String imageUri=null;
                 @Override
