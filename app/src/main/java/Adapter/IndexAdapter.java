@@ -1,7 +1,6 @@
 package Adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -9,18 +8,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.qhatusubasta.R;
-import com.qhatusubasta.Subasta;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 import Model.Producto;
 
-public class RegistroProductoAdapter extends BaseAdapter {
+public class IndexAdapter extends BaseAdapter {
     private Context context;
     private List<Producto> gridIndex;
 
-    public RegistroProductoAdapter(Context context, List lista) {
+    public IndexAdapter(Context context, List lista) {
         this.context = context;
         this.gridIndex= lista;
     }

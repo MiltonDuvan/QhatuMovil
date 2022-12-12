@@ -16,6 +16,8 @@
     <color name="color_texto">#242B9F</color>
     <color name="transparente">#00242B9F</color>
     <color name="azulbtn">#03A9F4</color>
-    <color name="color_barra">#1B23A6</color>
+    <color name="color_barra">#242B9F</color>
+    <color name="color_barrat">#242B9F</color>
+    <color name="whitet">#00FFFFFF</color>
 
 </resources>

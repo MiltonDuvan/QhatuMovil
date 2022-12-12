@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -18,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import Adapter.RegistroProductoAdapter;
+import Adapter.IndexAdapter;
 import Model.Producto;
 
 public class Index extends AppCompatActivity implements View.OnClickListener {
@@ -26,6 +28,7 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
     DatabaseReference myRef;
     List<Producto> list = new ArrayList<>();
     GridView gribTndex;
+    public static String nombre,foto,descripcion,hora,fechainicio,fechacierre, valor;
 
     // Barras de navegacion
     ImageButton imgbHome, imgbFavoritos, imgbPerfil, imgbNotificaciones;
@@ -61,8 +64,27 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
                     Producto producto = objSaaptdhot.getValue(Producto.class);
                     list.add(producto);
 
-                    RegistroProductoAdapter adapter = new RegistroProductoAdapter(Index.this,list);
+                    IndexAdapter adapter = new IndexAdapter(Index.this,list);
                     gribTndex.setAdapter(adapter);
+
+                    gribTndex.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            nombre = list.get(position).getNombre();
+                            foto = list.get(position).getFoto();
+                            descripcion = list.get(position).getDescripcion();
+                            hora = list.get(position).getHora_cierre();
+                            fechainicio = list.get(position).getFecha_inicio();
+                            fechacierre = list.get(position).getFecha_cierre();
+                            valor = list.get(position).getOferta_inicial();
+
+
+                            Intent detalle = new Intent(Index.this, Subasta.class);
+
+                           startActivity(detalle);
+
+                        }
+                    });
                 }
             }
 

@@ -36,14 +36,14 @@
             android:layout_marginTop="120dp"
             android:gravity="end"
             android:orientation="horizontal">
-            <ImageButton
+            <ImageView
                 android:id="@+id/imgFovoritos"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:background="@drawable/estrella"
                 android:layout_marginRight="5dp"/>
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/imgCompartir"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
