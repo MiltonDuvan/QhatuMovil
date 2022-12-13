@@ -45,9 +45,11 @@ public class IndexAdapter extends BaseAdapter {
         ImageView imageView= (ImageView) root.findViewById(R.id.imgCarta);
         TextView txtdescripcion = root.findViewById(R.id.txtDescripcionCarta);
         TextView txtprecio = root.findViewById(R.id.txtValorCarta);
+        TextView txtnombre = root.findViewById(R.id.txtNombreCarta);
 
         txtdescripcion.setText(gridIndex.get(position).getDescripcion());
         txtprecio.setText(gridIndex.get(position).getOferta_inicial());
+        txtnombre.setText(gridIndex.get(position).getNombre());
 
         String imageUri=null;
         imageUri= gridIndex.get(position).getFoto();
