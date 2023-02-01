@@ -34,7 +34,7 @@ public class PerfilUser extends AppCompatActivity implements View.OnClickListene
     TextView txtnombre,txtapellido,txtcorreo;
 
     // Barras de navegacion
-    ImageButton imgbHome, imgbFavoritos, imgbPerfil;
+    ImageButton imgbHome, imgbFavoritos, imgbPerfil, btnProducto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,6 +112,8 @@ public class PerfilUser extends AppCompatActivity implements View.OnClickListene
         imgbFavoritos.setOnClickListener(this);
         imgbPerfil = findViewById(R.id.imgbPerfil);
         imgbPerfil.setOnClickListener(this);
+        btnProducto = findViewById(R.id.btnProducto);
+        btnProducto.setOnClickListener(this);
     }
 
 
@@ -127,13 +129,18 @@ public class PerfilUser extends AppCompatActivity implements View.OnClickListene
                 startActivity(home);
                 break;
             case R.id.imgbFavoritos:
-                Intent favoritos = new Intent(PerfilUser.this,RegistroProducto.class);
+                Intent favoritos = new Intent(PerfilUser.this,Favoritos.class);
                 startActivity(favoritos);
                 break;
 
             case R.id.imgbPerfil:
                 Intent perfil = new Intent(PerfilUser.this,PerfilUser.class);
                 startActivity(perfil);
+                break;
+
+            case R.id.btnProducto:
+                Intent newProducto = new Intent(PerfilUser.this,RegistroProducto.class);
+                startActivity(newProducto);
                 break;
         }
 

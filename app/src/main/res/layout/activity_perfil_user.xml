@@ -156,6 +156,15 @@
                     android:layout_gravity="center_horizontal"
                     android:backgroundTint="@color/azulbtn"
                     android:text="Cerrar sesión" />
+                <ImageButton
+                    android:id="@+id/btnProducto"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/carrito"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/icono"
+                    />
             </LinearLayout>
 
         </LinearLayout>

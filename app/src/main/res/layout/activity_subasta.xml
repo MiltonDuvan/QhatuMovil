@@ -194,7 +194,8 @@
                      <ListView
                          android:id="@+id/listaChat"
                          android:layout_width="wrap_content"
-                         android:layout_height="wrap_content">
+                         android:layout_height="wrap_content"
+                         android:divider="@null">
                      </ListView>
              </LinearLayout>
             <LinearLayout
@@ -214,7 +215,7 @@
                     android:layout_marginRight="30dp"
                     android:elevation="2dp"
                     android:paddingLeft="10dp"
-                    android:hint="$ Oferta"/>
+                    android:hint="Hacer Oferta"/>
                 <Button
                     android:id="@+id/btnComentarOferta"
                     android:layout_width="30dp"
