@@ -1,33 +1,63 @@
 {
   "project_info": {
-    "project_number": "968330300674",
-    "project_id": "subastaqhatu",
-    "storage_bucket": "subastaqhatu.appspot.com"
+    "project_number": "252211044135",
+    "firebase_url": "https://subasta-763f7-default-rtdb.firebaseio.com",
+    "project_id": "subasta-763f7",
+    "storage_bucket": "subasta-763f7.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:968330300674:android:2e5f5ab22828218326461b",
+        "mobilesdk_app_id": "1:252211044135:android:e90298cd5760d5691e1302",
         "android_client_info": {
-          "package_name": "com.qhatusubasta"
+          "package_name": "com.juan.qhatusubasta"
         }
       },
       "oauth_client": [
         {
-          "client_id": "968330300674-ncg6vjromd6p3g7eea7d5lb0o8u6es53.apps.googleusercontent.com",
+          "client_id": "252211044135-k3acbqf33h48u77d6o3n43t20mr9tssj.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCiWFLflmAgGzKMUQJWsTyNWamc2S7-CN0"
+          "current_key": "AIzaSyAZT5wog4n5vzE8lds6w3LrFdkNlINbGQM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "968330300674-ncg6vjromd6p3g7eea7d5lb0o8u6es53.apps.googleusercontent.com",
+              "client_id": "252211044135-k3acbqf33h48u77d6o3n43t20mr9tssj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:252211044135:android:9e2ea36afef8684a1e1302",
+        "android_client_info": {
+          "package_name": "com.qhatusubasta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "252211044135-k3acbqf33h48u77d6o3n43t20mr9tssj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZT5wog4n5vzE8lds6w3LrFdkNlINbGQM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "252211044135-k3acbqf33h48u77d6o3n43t20mr9tssj.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
