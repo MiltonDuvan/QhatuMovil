@@ -28,6 +28,7 @@ public class Index extends AppCompatActivity implements View.OnClickListener {
     DatabaseReference myRef;
     List<Producto> list = new ArrayList<>();
     GridView gribTndex;
+
     public static String nombre,foto,descripcion,hora,fechainicio,fechacierre, valor;
 
     // Barras de navegacion

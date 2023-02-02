@@ -78,7 +78,7 @@ public class RegistroProducto extends AppCompatActivity implements View.OnClickL
         RequestQueue myRequest = Volley.newRequestQueue(getApplicationContext());
         JSONObject json = new JSONObject();
         try {
-            //String token ="cxlNcfSkT8mGiB4szem2by:APA91bF7ntjPMR6VUnTscO_Ii2Vg0KPqTHlU6isTszTuB3tA1KDYSgT_qUL0CTY8-HJ5qjWDleOSmcfXAZL5aTfLXlpe7ZixFZA_j4B9pTZ_Mnl1TnURBaAhYXpjc0SsoPhw3Dfwh3u9";
+           // String token ="eV3ot7VjS7WqHg89aXOVIh:APA91bGTS8A0qYvEXH3p9KSTA92-eDP0nMDgkPjCmRyBADMBjgIS76h2cLJUwEG94G-tct2K3s5mXxqlgTJpheNW6e0As_eG-9FF3qL5ORI_D8FKe3nNxkEo7kNtzcq-ywmNyH1RxDN7";
             json.put("to", "/topics/" + "enviaratodos");
             JSONObject notificacion = new JSONObject();
             notificacion.put("titulo", "Novedad nueva");
@@ -102,6 +102,7 @@ public class RegistroProducto extends AppCompatActivity implements View.OnClickL
 
         }
     }
+
     public void InsertarProducto(){
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference();

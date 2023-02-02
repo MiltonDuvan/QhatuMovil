@@ -7,21 +7,30 @@
     android:orientation="vertical"
     tools:context=".Index">
 
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:orientation="horizontal"
         android:gravity="center"
         android:background="@color/color_borde">
+
+<!--        <SearchView-->
+<!--            android:id="@+id/buscarProducto"-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_margin="10dp"/>-->
+
         <ImageButton
             android:id="@+id/buscar"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/lupa"
-            android:background="@drawable/icono"
+            android:layout_marginLeft="20dp"
             android:layout_marginRight="0dp"
-            android:layout_marginLeft="20dp"/>
+            android:background="@drawable/icono"
+            android:scaleType="centerCrop"
+            android:src="@drawable/lupa" />
 
         <EditText
             android:id="@+id/edtbuscar"
