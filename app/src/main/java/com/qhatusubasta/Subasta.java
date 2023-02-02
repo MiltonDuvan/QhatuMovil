@@ -39,6 +39,8 @@ public class Subasta extends AppCompatActivity implements View.OnClickListener {
     List<Oferta> list = new ArrayList<>();
     ListView listaChat;
 
+    String ofertauser;
+
     // Barras de navegacion
     ImageView imgsubasta;
     ImageButton imgbHome, imgbFavoritos, imgbPerfil, imgbNotificaciones;
@@ -82,6 +84,12 @@ public class Subasta extends AppCompatActivity implements View.OnClickListener {
                     ChatAdapter chatAdapter = new ChatAdapter(Subasta.this,list);
                     listaChat.setAdapter(chatAdapter);
 
+                    listaChat.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            ofertauser = list.get(position).getOferta();
+                        }
+                    });
                 }
             }
 

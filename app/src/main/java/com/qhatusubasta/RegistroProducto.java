@@ -17,16 +17,28 @@ import android.widget.ImageButton;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+import com.bumptech.glide.RequestManager;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Queue;
 import java.util.UUID;
 
 import Model.Producto;
@@ -54,7 +66,41 @@ public class RegistroProducto extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_producto);
         storageReference = FirebaseStorage.getInstance().getReference();
+        FirebaseMessaging.getInstance().subscribeToTopic("enviaratodos").addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                Toast.makeText(RegistroProducto.this, "mensaje para todos", Toast.LENGTH_SHORT).show();
+            }
+        });
         referenciar();
+    }
+    private void NotificacionProducto(){
+        RequestQueue myRequest = Volley.newRequestQueue(getApplicationContext());
+        JSONObject json = new JSONObject();
+        try {
+            //String token ="cxlNcfSkT8mGiB4szem2by:APA91bF7ntjPMR6VUnTscO_Ii2Vg0KPqTHlU6isTszTuB3tA1KDYSgT_qUL0CTY8-HJ5qjWDleOSmcfXAZL5aTfLXlpe7ZixFZA_j4B9pTZ_Mnl1TnURBaAhYXpjc0SsoPhw3Dfwh3u9";
+            json.put("to", "/topics/" + "enviaratodos");
+            JSONObject notificacion = new JSONObject();
+            notificacion.put("titulo", "Novedad nueva");
+            notificacion.put("detalle", "Nuevo registro de Subasta");
+            json.put("data", notificacion);
+
+            String URL = "https://fcm.googleapis.com/fcm/send";
+            JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, URL, json, null, null) {
+                @Override
+                public Map<String, String> getHeaders() {
+                    Map<String, String> header = new HashMap<>();
+                    header.put("content-type", "application/json");
+                    header.put("authorization", "key= BM3E07Jua8F_06wHsLd6Wbk_KZMVF36H2S7wf9SzxUt6fHlx_h0JmmYg6D6vEOaoluB8TXFrisOUKZbKF3Uz2Xk");
+                    return header;
+                }
+            };
+
+            myRequest.add(request);
+        } catch (JSONException e) {
+            e.printStackTrace();
+
+        }
     }
     public void InsertarProducto(){
         database = FirebaseDatabase.getInstance();
@@ -73,7 +119,6 @@ public class RegistroProducto extends AppCompatActivity implements View.OnClickL
         Toast.makeText(this, "Datos insertados", Toast.LENGTH_SHORT).show();
 
     }
-
     private void referenciar() {
         img_producto = findViewById(R.id.img_subirencont);
         img_producto.setOnClickListener(this);
@@ -125,8 +170,8 @@ public class RegistroProducto extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btnPublicarProducto:
-
                 InsertarProducto();
+                NotificacionProducto();
                 img_producto.setImageResource(0);
                 edtDescripcionProducto.setText("");
                 edtNombreProducto.setText("");
