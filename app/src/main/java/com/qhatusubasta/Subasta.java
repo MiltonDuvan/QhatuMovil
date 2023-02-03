@@ -83,13 +83,6 @@ public class Subasta extends AppCompatActivity implements View.OnClickListener {
 
                     ChatAdapter chatAdapter = new ChatAdapter(Subasta.this,list);
                     listaChat.setAdapter(chatAdapter);
-
-                    listaChat.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                        @Override
-                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                            ofertauser = list.get(position).getOferta();
-                        }
-                    });
                 }
             }
 
@@ -106,14 +99,13 @@ public class Subasta extends AppCompatActivity implements View.OnClickListener {
         edtComentarOferta = findViewById(R.id.edtComentarOferta);
         btnComentarOferta = findViewById(R.id.btnComentarOferta);
         btnComentarOferta.setOnClickListener(this);
-
-  txtnombresubasta = findViewById(R.id.txtNombreSubasta);
-  txtdescripcion = findViewById(R.id.txtDescripcionSubasta);
-  txthorasubasta = findViewById(R.id.txtHoraSubasta);
-  txtfechainicio = findViewById(R.id.txtFechaInicioSubasta);
-  txtfechacierre = findViewById(R.id.txtFechaFinSubasta);
-  txtvalorsubasta =findViewById(R.id.txtValorSubasta);
-  imgsubasta = findViewById(R.id.imgSubasta);
+        txtnombresubasta = findViewById(R.id.txtNombreSubasta);
+        txtdescripcion = findViewById(R.id.txtDescripcionSubasta);
+        txthorasubasta = findViewById(R.id.txtHoraSubasta);
+        txtfechainicio = findViewById(R.id.txtFechaInicioSubasta);
+        txtfechacierre = findViewById(R.id.txtFechaFinSubasta);
+        txtvalorsubasta =findViewById(R.id.txtValorSubasta);
+        imgsubasta = findViewById(R.id.imgSubasta);
 
         // de navegacion
         imgbHome = findViewById(R.id.imgbHome);

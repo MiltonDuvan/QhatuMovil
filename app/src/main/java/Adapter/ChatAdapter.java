@@ -17,7 +17,6 @@ import Model.Usuario;
 public class ChatAdapter extends BaseAdapter {
     private Context context;
     private List<Oferta> listaChat;
-
     public ChatAdapter(Context context, List listaoferta){
         this.context = context;
         this.listaChat = listaoferta;
