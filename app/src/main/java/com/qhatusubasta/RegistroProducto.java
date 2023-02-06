@@ -74,15 +74,14 @@ public class RegistroProducto extends AppCompatActivity implements View.OnClickL
         });
         referenciar();
     }
-    private void NotificacionProducto(){
+    private void llamarAtopico() {
         RequestQueue myRequest = Volley.newRequestQueue(getApplicationContext());
         JSONObject json = new JSONObject();
         try {
-           // String token ="eV3ot7VjS7WqHg89aXOVIh:APA91bGTS8A0qYvEXH3p9KSTA92-eDP0nMDgkPjCmRyBADMBjgIS76h2cLJUwEG94G-tct2K3s5mXxqlgTJpheNW6e0As_eG-9FF3qL5ORI_D8FKe3nNxkEo7kNtzcq-ywmNyH1RxDN7";
             json.put("to", "/topics/" + "enviaratodos");
             JSONObject notificacion = new JSONObject();
             notificacion.put("titulo", "Novedad nueva");
-            notificacion.put("detalle", "Nuevo registro de Subasta");
+            notificacion.put("detalle", "Nueva Subasta publicada");
             json.put("data", notificacion);
 
             String URL = "https://fcm.googleapis.com/fcm/send";
@@ -91,7 +90,7 @@ public class RegistroProducto extends AppCompatActivity implements View.OnClickL
                 public Map<String, String> getHeaders() {
                     Map<String, String> header = new HashMap<>();
                     header.put("content-type", "application/json");
-                    header.put("authorization", "key= BM3E07Jua8F_06wHsLd6Wbk_KZMVF36H2S7wf9SzxUt6fHlx_h0JmmYg6D6vEOaoluB8TXFrisOUKZbKF3Uz2Xk");
+                    header.put("authorization", "key=AAAAKxkZS1c:APA91bGGYSVF4UldMMY1IuCfzf5Pe2v9iam9wo2GC3qEUgz_I4Lub1wwMKUsm63wVu9S3uJbzv_nE373i72phivM7WrCkIdwxrqJF173d8t1ER93q5b9oGthArlMc3XaySgmWRcQ4z7Z");
                     return header;
                 }
             };
@@ -172,7 +171,7 @@ public class RegistroProducto extends AppCompatActivity implements View.OnClickL
         switch (v.getId()){
             case R.id.btnPublicarProducto:
                 InsertarProducto();
-                NotificacionProducto();
+                llamarAtopico();
                 img_producto.setImageResource(0);
                 edtDescripcionProducto.setText("");
                 edtNombreProducto.setText("");

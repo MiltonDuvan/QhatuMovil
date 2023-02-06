@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 public class Notificaciones extends AppCompatActivity implements View.OnClickListener {
     // Barras de navegacion
     ImageButton imgbHome, imgbFavoritos, imgbPerfil, imgbNotificaciones;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
