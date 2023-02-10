@@ -119,6 +119,7 @@ public class RegistroProducto extends AppCompatActivity implements View.OnClickL
         Toast.makeText(this, "Datos insertados", Toast.LENGTH_SHORT).show();
 
     }
+
     private void referenciar() {
         img_producto = findViewById(R.id.img_subirencont);
         img_producto.setOnClickListener(this);
